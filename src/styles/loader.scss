@@ -1,0 +1,45 @@
+.loader
+{
+    position:fixed;
+    top:45%;
+    left:45%;
+    width:10rem;
+    animation-name: x;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+
+    img
+    {
+        width:100%;
+    }
+
+    @keyframes x
+    {
+    to
+    {
+        transform:scale(1);
+    }
+    from
+    {
+        transform: scale(0.2);
+    }
+   }
+}
+body
+{
+    background-color: yellow;
+}
+@media screen  and (max-width:1500px){
+    .loader
+    {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        img
+        {
+            width:100%;
+        }
+    }
+}
+

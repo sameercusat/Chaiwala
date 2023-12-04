@@ -1,0 +1,89 @@
+@import "colors";
+
+
+.cursor
+{
+    width:26px;
+    height:26px;
+    pointer-events: none;
+    border:2px solid $red;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s;
+    z-index:200;
+}
+.cursorHover
+{
+    transform: scale(3);
+    border:none;
+    box-shadow: 0 0 10px $red;
+}
+.cursorHoverMini
+{
+    transform: scale(0.5);
+    border:none;
+    box-shadow: 0 0 20px $red;
+}
+.logo
+{
+    position: fixed;
+    top:2rem;
+    left:2rem;
+    width:9rem;
+    img
+    {
+        width:100%;
+    }
+}
+.franchiseBtn
+{
+    position:fixed;
+    top:1rem;
+    right:5rem;
+    background-color: $brown;
+    color:$yellow;
+    padding:0.9rem 1.25rem ;
+    border-radius:7px;
+    font:600 14px $text;
+    border:none;
+    transform-origin: bottom;
+    transition: transform 1s;
+    letter-spacing: 2px;
+    &:hover
+    {
+        transform: skewX(-10deg);
+    }
+}
+.scrollBtn
+{
+ position:absolute;
+ left:50%;
+ bottom:5rem;
+ transform: translateX(-50%);
+ color:$white;
+ font-size: 4rem;
+ animation: mouseScrollAnimation 0.5s linear infinite alternate;
+}
+@keyframes mouseScrollAnimation
+{
+    to
+    {
+        transform:translate(-50%,-10px);
+    }
+}
+@media screen and (max-width:820px)
+{
+    .franchiseBtn
+    {
+        top:unset;
+        right:unset;
+        left:50%;
+        transform: translateX(-50%);
+        bottom:1rem;
+        &:hover
+        {
+            transform: translateX(-50%) skewX(-10deg);
+        }
+    }
+   
+}
